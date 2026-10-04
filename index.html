@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Hüseyin Güçlü kişisel web sitesi. Web Tasarım ve Kodlama öğrencisi Hüseyin Güçlü hakkında bilgiler, özgeçmiş ve iletişim.">
+          content="Hüseyin Güçlü - Web tasarım, işletme web siteleri, NFC menü, NFC Google yorum, NFC sosyal medya ve dijital çözümler.">
 
     <meta name="author" content="Hüseyin Güçlü">
 
-    <title>Hüseyin Güçlü | Kişisel Web Sitesi</title>
+    <title>Hüseyin Güçlü | Web Tasarım</title>
 
     <style>
 
@@ -17,7 +17,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         html {
@@ -25,23 +24,25 @@
         }
 
         body {
+            font-family: Arial, Helvetica, sans-serif;
             background: #0b1020;
-            color: white;
+            color: #fff;
             line-height: 1.6;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
 
         header {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(11, 16, 32, 0.88);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,.1);
+            background: rgba(11, 16, 32, 0.92);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
         }
 
         nav {
@@ -59,92 +60,51 @@
             color: #6c63ff;
         }
 
-        .logo strong {
-            color: white;
+        .logo span {
+            color: #fff;
         }
 
         nav a {
             color: #ddd;
-            text-decoration: none;
-            margin-left: 22px;
-            transition: .3s;
+            margin-left: 20px;
             font-size: 15px;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #6c63ff;
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* ANA SAYFA */
 
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
 
             background:
-                radial-gradient(
-                    circle at top left,
-                    #272060 0,
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at bottom right,
-                    #102c54 0,
-                    transparent 35%
-                );
+                radial-gradient(circle at top left, #272060, transparent 35%),
+                radial-gradient(circle at bottom right, #102c54, transparent 35%);
         }
 
         .hero-content {
             max-width: 850px;
-            width: 100%;
-        }
-
-        .hero-photo {
-            width: 145px;
-            height: 145px;
-            margin: 0 auto 25px;
-            border-radius: 50%;
-            padding: 4px;
-
-            background: linear-gradient(
-                135deg,
-                #6c63ff,
-                #8b5cf6,
-                #38bdf8
-            );
-
-            box-shadow:
-                0 15px 45px rgba(108,99,255,.35);
-        }
-
-        .hero-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #0b1020;
-            display: block;
         }
 
         .hero-small {
             color: #8b5cf6;
-            font-size: 16px;
             font-weight: bold;
+            letter-spacing: 2px;
             margin-bottom: 15px;
-            letter-spacing: 1px;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 8vw, 80px);
+            font-size: clamp(42px, 8vw, 78px);
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
@@ -152,16 +112,37 @@
         }
 
         .hero p {
+            max-width: 700px;
+            margin: auto;
             color: #b9bfd3;
-            font-size: 19px;
-            margin: 0 auto 30px;
-            max-width: 720px;
+            font-size: 18px;
         }
 
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            border-radius: 12px;
 
-        /* =========================
-           SOSYAL MEDYA
-        ========================= */
+            background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+
+            color: #fff;
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 10px 30px rgba(108, 99, 255, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 35px rgba(108, 99, 255, 0.4);
+        }
+
+        /* SOSYAL MEDYA */
 
         .social-links {
             display: flex;
@@ -171,68 +152,31 @@
         }
 
         .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
+            width: 44px;
+            height: 44px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            background: rgba(255,255,255,.06);
-            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 10px;
 
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
 
-            transition: .3s;
+            color: #fff;
+            font-size: 19px;
+
+            transition: 0.3s;
         }
 
         .social-link:hover {
-            transform: translateY(-4px);
             background: #6c63ff;
             border-color: #6c63ff;
-            box-shadow:
-                0 8px 25px rgba(108,99,255,.3);
-        }
-
-
-        /* =========================
-           BUTON
-        ========================= */
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 12px;
-
-            background: linear-gradient(
-                135deg,
-                #6c63ff,
-                #8b5cf6
-            );
-
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-
-            box-shadow:
-                0 10px 30px rgba(108,99,255,.3);
-
-            transition: .3s;
-        }
-
-        .btn:hover {
             transform: translateY(-3px);
-            box-shadow:
-                0 15px 35px rgba(108,99,255,.45);
         }
 
-
-        /* =========================
-           GENEL SECTION
-        ========================= */
+        /* GENEL BÖLÜMLER */
 
         section {
             max-width: 1100px;
@@ -243,47 +187,58 @@
         .title {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 45px;
+            margin-bottom: 20px;
         }
 
         .section-description {
+            max-width: 750px;
+            margin: 0 auto 40px;
             text-align: center;
             color: #aeb5c8;
-            max-width: 750px;
-            margin: -20px auto 40px;
         }
 
-
-        /* =========================
-           BEN KİMİM
-        ========================= */
+        /* HAKKIMDA */
 
         .about-main {
             display: grid;
             grid-template-columns: 280px 1fr;
-            gap: 30px;
-            align-items: stretch;
+            gap: 25px;
+        }
+
+        .about-profile,
+        .about-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
         }
 
         .about-profile {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.08);
-            border-radius: 20px;
-            padding: 30px;
+            padding: 35px 25px;
             text-align: center;
         }
 
-        .about-profile-photo {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            object-fit: cover;
+        .profile-letter {
+            width: 130px;
+            height: 130px;
 
-            border: 4px solid #6c63ff;
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(135deg, #6c63ff, #8b5cf6);
+
+            color: #fff;
+
+            font-size: 48px;
+            font-weight: bold;
 
             box-shadow:
-                0 10px 30px rgba(108,99,255,.25);
+                0 10px 35px rgba(108, 99, 255, 0.3);
         }
 
         .about-profile h3 {
@@ -301,9 +256,6 @@
         }
 
         .about-content {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.08);
-            border-radius: 20px;
             padding: 35px;
         }
 
@@ -324,77 +276,81 @@
         .about-highlight {
             margin-top: 25px;
             padding: 18px;
+
             border-left: 4px solid #6c63ff;
-            background: rgba(108,99,255,.08);
             border-radius: 8px;
+
+            background: rgba(108, 99, 255, 0.08);
+
             color: #d7dbea;
         }
 
-
-        /* =========================
-           BİLGİ KARTLARI
-        ========================= */
-
         .info-list {
-            margin-top: 25px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
+            margin-top: 25px;
         }
 
         .info-item {
-            padding: 14px;
-            border-radius: 12px;
-            background: rgba(255,255,255,.04);
+            padding: 13px;
+
+            border-radius: 10px;
+
+            background: rgba(255, 255, 255, 0.04);
+
             color: #cdd2df;
         }
 
         .info-item strong {
-            color: white;
+            color: #fff;
         }
 
-
-        /* =========================
-           KARTLAR
-        ========================= */
+        /* KARTLAR */
 
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 20px;
         }
 
         .card {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.08);
-            padding: 30px;
-            border-radius: 20px;
-            transition: .3s;
+            padding: 28px;
+
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
+
             border-color: #6c63ff;
-            background: rgba(108,99,255,.08);
+
+            background:
+                rgba(108, 99, 255, 0.08);
         }
 
         .card .icon {
-            font-size: 35px;
+            font-size: 34px;
             margin-bottom: 15px;
         }
 
         .card h3 {
             margin-bottom: 10px;
+            font-size: 20px;
         }
 
         .card p {
             color: #aeb5c8;
+            font-size: 15px;
         }
 
-
-        /* =========================
-           İLETİŞİM
-        ========================= */
+        /* İLETİŞİM */
 
         .contact {
             text-align: center;
@@ -403,11 +359,14 @@
         .contact-box {
             max-width: 750px;
             margin: auto;
-            padding: 35px;
-            border-radius: 20px;
 
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.08);
+            padding: 35px;
+
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .contact-box p {
@@ -419,57 +378,47 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            margin-bottom: 25px;
         }
 
         .contact-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            padding: 13px;
 
-            padding: 13px 18px;
             border-radius: 10px;
 
-            background: rgba(255,255,255,.06);
-            border: 1px solid rgba(255,255,255,.08);
+            color: #fff;
 
-            color: white;
-            text-decoration: none;
+            background: rgba(255, 255, 255, 0.06);
 
-            transition: .3s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s;
         }
 
         .contact-link:hover {
-            border-color: #6c63ff;
             color: #6c63ff;
-            transform: translateY(-2px);
+            border-color: #6c63ff;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
-            text-align: center;
             padding: 30px 20px;
 
+            text-align: center;
+
             background: #070b16;
+
             color: #9299ac;
 
             border-top:
-                1px solid rgba(255,255,255,.08);
+                1px solid rgba(255, 255, 255, 0.08);
         }
 
         footer strong {
             color: #6c63ff;
         }
 
-
-        /* =========================
-           MOBİL
-        ========================= */
+        /* MOBİL */
 
         @media (max-width: 750px) {
 
@@ -483,11 +432,11 @@
                 font-size: 13px;
             }
 
-            .cards {
+            .about-main {
                 grid-template-columns: 1fr;
             }
 
-            .about-main {
+            .cards {
                 grid-template-columns: 1fr;
             }
 
@@ -520,7 +469,6 @@
             }
         }
 
-
         @media (max-width: 400px) {
 
             .logo {
@@ -535,11 +483,6 @@
                 font-size: 38px;
             }
 
-            .hero-photo {
-                width: 120px;
-                height: 120px;
-            }
-
             .btn {
                 padding: 13px 22px;
             }
@@ -548,20 +491,14 @@
     </style>
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
     <nav>
 
         <div class="logo">
-            Hüseyin <strong>Güçlü</strong>
+            Hüseyin <span>Güçlü</span>
         </div>
 
         <div>
@@ -595,626 +532,465 @@
 
 <main>
 
+    <!-- ANA SAYFA -->
 
-<!-- =========================
-     ANA SAYFA
-========================= -->
+    <section class="hero" id="anasayfa">
 
-<section class="hero" id="anasayfa">
+        <div class="hero-content">
 
-    <div class="hero-content">
+            <div class="hero-small">
+                HÜSEYİN GÜÇLÜ
+            </div>
 
+            <h1>
+                Merhaba, Ben
+                <span>Hüseyin Güçlü</span>
+            </h1>
 
-        <!-- PROFİL FOTOĞRAFI -->
+            <p>
+                İstanbul'da yaşayan 19 yaşında bir
+                Web Tasarım ve Kodlama öğrencisiyim.
+                Web siteleri, dijital çözümler ve
+                işletmeler için kullanışlı internet
+                çözümleri geliştirmeye ilgi duyuyorum.
+            </p>
 
-        <div class="hero-photo">
+            <a href="#hizmetler" class="btn">
+                Hizmetlerimi Gör →
+            </a>
 
-            <img
-                src="profil.jpg"
-                alt="Hüseyin Güçlü profil fotoğrafı"
-            >
+            <div class="social-links">
+
+                <a
+                    class="social-link"
+                    href="https://www.instagram.com/hsyngcl_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Instagram">
+                    📷
+                </a>
+
+                <a
+                    class="social-link"
+                    href="https://wa.me/905443642830"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="WhatsApp">
+                    💬
+                </a>
+
+                <a
+                    class="social-link"
+                    href="tel:05443642830"
+                    title="Telefon">
+                    📞
+                </a>
+
+                <a
+                    class="social-link"
+                    href="mailto:huseyinguclu123456789@gmail.com"
+                    title="E-posta">
+                    ✉️
+                </a>
+
+            </div>
 
         </div>
 
-
-        <div class="hero-small">
-            HÜSEYİN GÜÇLÜ
-        </div>
+    </section>
 
 
-        <h1>
+    <!-- HAKKIMDA -->
 
-            Merhaba, Ben
+    <section id="hakkimda">
 
-            <span>
-                Hüseyin Güçlü
-            </span>
+        <h2 class="title">
+            Ben Kimim?
+        </h2>
 
-        </h1>
-
-
-        <p>
-
-            İstanbul'da yaşayan 19 yaşında bir
-            Web Tasarım ve Kodlama öğrencisiyim.
-
-            Modern, şık, mobil uyumlu ve kullanışlı
-            web siteleri geliştirmeye ilgi duyuyorum.
-
+        <p class="section-description">
+            Hüseyin Güçlü hakkında daha yakından bilgi edinin.
         </p>
 
+        <div class="about-main">
 
-        <a
-            href="#hakkimda"
-            class="btn"
-        >
-            Hüseyin Güçlü'yü Tanı →
-        </a>
+            <div class="about-profile">
 
+                <div class="profile-letter">
+                    HG
+                </div>
 
-        <!-- SOSYAL MEDYA -->
+                <h3>
+                    Hüseyin <span>Güçlü</span>
+                </h3>
 
-        <div class="social-links">
-
-
-            <!-- INSTAGRAM -->
-
-            <a
-                class="social-link"
-                href="https://www.instagram.com/hsyngcl_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Instagram"
-            >
-                📷
-            </a>
-
-
-            <!-- WHATSAPP -->
-
-            <a
-                class="social-link"
-                href="https://wa.me/905443642830"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="WhatsApp"
-            >
-                💬
-            </a>
-
-
-            <!-- TELEFON -->
-
-            <a
-                class="social-link"
-                href="tel:05443642830"
-                title="Telefon"
-            >
-                📞
-            </a>
-
-
-            <!-- E-POSTA -->
-
-            <a
-                class="social-link"
-                href="mailto:huseyinguclu123456789@gmail.com"
-                title="E-posta"
-            >
-                ✉️
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     BEN KİMİM
-========================= -->
-
-<section id="hakkimda">
-
-    <h2 class="title">
-        Ben Kimim?
-    </h2>
-
-
-    <p class="section-description">
-
-        Hüseyin Güçlü hakkında daha yakından bilgi edinin.
-
-    </p>
-
-
-    <div class="about-main">
-
-
-        <!-- PROFİL -->
-
-        <div class="about-profile">
-
-            <img
-                class="about-profile-photo"
-                src="profil.jpg"
-                alt="Hüseyin Güçlü"
-            >
-
-
-            <h3>
-
-                Hüseyin
-                <span>Güçlü</span>
-
-            </h3>
-
-
-            <p>
-                Web Tasarım ve Kodlama Öğrencisi
-            </p>
-
-        </div>
-
-
-        <!-- HAKKIMDA -->
-
-        <div class="about-content">
-
-            <h3>
-
-                Merhaba, ben
-                <span>Hüseyin Güçlü.</span>
-
-            </h3>
-
-
-            <p>
-
-                19 yaşındayım ve İstanbul'da yaşıyorum.
-                Web Tasarım ve Kodlama bölümünde 1. sınıf
-                öğrencisiyim.
-
-            </p>
-
-
-            <p>
-
-                Web tasarım, kodlama ve internet teknolojilerine
-                büyük ilgi duyuyorum. Eğitim hayatım boyunca
-                öğrendiğim bilgileri farklı projelerde kullanarak
-                kendimi geliştirmeye çalışıyorum.
-
-            </p>
-
-
-            <p>
-
-                Özellikle modern, sade, hızlı ve mobil cihazlarda
-                düzgün çalışan web siteleri tasarlamak benim için
-                önemli.
-
-            </p>
-
-
-            <div class="about-highlight">
-
-                <strong>
-                    Hüseyin Güçlü olarak hedefim:
-                </strong>
-
-                öğrendiklerimi gerçek projelere dönüştürmek,
-                kendimi web tasarım ve kodlama alanında geliştirmek
-                ve kaliteli web siteleri ortaya çıkarmaktır.
+                <p>
+                    Web Tasarım ve Kodlama Öğrencisi
+                </p>
 
             </div>
 
 
-            <!-- BİLGİLER -->
+            <div class="about-content">
 
-            <div class="info-list">
+                <h3>
+                    Merhaba, ben
+                    <span>Hüseyin Güçlü.</span>
+                </h3>
 
+                <p>
+                    19 yaşındayım ve İstanbul'da yaşıyorum.
+                    Web Tasarım ve Kodlama bölümünde
+                    1. sınıf öğrencisiyim.
+                </p>
 
-                <div class="info-item">
+                <p>
+                    Web tasarım ve internet teknolojilerine
+                    ilgi duyuyorum. Öğrendiklerimi farklı
+                    projelerde deneyerek kendimi geliştirmeye
+                    çalışıyorum.
+                </p>
 
-                    👤
+                <p>
+                    Özellikle sade, modern, hızlı ve
+                    telefonlarda düzgün çalışan web siteleri
+                    hazırlamayı seviyorum.
+                </p>
 
-                    <strong>
-                        Ad:
-                    </strong>
+                <div class="about-highlight">
 
-                    Hüseyin Güçlü
+                    <strong>Hedefim:</strong>
 
-                </div>
-
-
-                <div class="info-item">
-
-                    🎂
-
-                    <strong>
-                        Yaş:
-                    </strong>
-
-                    19
-
-                </div>
-
-
-                <div class="info-item">
-
-                    📍
-
-                    <strong>
-                        Konum:
-                    </strong>
-
-                    İstanbul
+                    Öğrendiklerimi gerçek projelerde kullanmak,
+                    kendimi geliştirmek ve işletmeler için
+                    faydalı dijital çözümler hazırlamak.
 
                 </div>
 
+                <div class="info-list">
 
-                <div class="info-item">
+                    <div class="info-item">
+                        👤
+                        <strong>Ad:</strong>
+                        Hüseyin Güçlü
+                    </div>
 
+                    <div class="info-item">
+                        🎂
+                        <strong>Yaş:</strong>
+                        19
+                    </div>
+
+                    <div class="info-item">
+                        📍
+                        <strong>Konum:</strong>
+                        İstanbul
+                    </div>
+
+                    <div class="info-item">
+                        🎓
+                        <strong>Bölüm:</strong>
+                        Web Tasarım ve Kodlama
+                    </div>
+
+                    <div class="info-item">
+                        📚
+                        <strong>Sınıf:</strong>
+                        1. Sınıf
+                    </div>
+
+                    <div class="info-item">
+                        💻
+                        <strong>Alan:</strong>
+                        Web Tasarım
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ÖZGEÇMİŞ -->
+
+    <section id="ozgecmis">
+
+        <h2 class="title">
+            Özgeçmiş
+        </h2>
+
+        <p class="section-description">
+            Eğitim hayatım, ilgi alanlarım ve web tasarım yolculuğum.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">
                     🎓
-
-                    <strong>
-                        Bölüm:
-                    </strong>
-
-                    Web Tasarım ve Kodlama
-
                 </div>
 
+                <h3>
+                    Eğitim
+                </h3>
 
-                <div class="info-item">
+                <p>
+                    Web Tasarım ve Kodlama bölümünde
+                    1. sınıf öğrencisiyim. Web teknolojileri
+                    ve kodlama alanında kendimi geliştirmeye
+                    devam ediyorum.
+                </p>
 
-                    📚
-
-                    <strong>
-                        Sınıf:
-                    </strong>
-
-                    1. Sınıf
-
-                </div>
+            </div>
 
 
-                <div class="info-item">
+            <div class="card">
 
+                <div class="icon">
                     💻
-
-                    <strong>
-                        Alan:
-                    </strong>
-
-                    Web Tasarım
-
                 </div>
 
+                <h3>
+                    Web Tasarım
+                </h3>
+
+                <p>
+                    HTML, CSS ve JavaScript gibi web
+                    teknolojileri ile modern ve mobil
+                    uyumlu web siteleri hazırlamaya
+                    ilgi duyuyorum.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Hedeflerim
+                </h3>
+
+                <p>
+                    Kendimi geliştirerek daha profesyonel
+                    projeler hazırlamak ve işletmelere
+                    faydalı dijital çözümler sunmak
+                    istiyorum.
+                </p>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- HİZMETLER -->
 
+    <section id="hizmetler">
 
-<!-- =========================
-     ÖZGEÇMİŞ
-========================= -->
+        <h2 class="title">
+            Hizmetler
+        </h2>
 
-<section id="ozgecmis">
-
-    <h2 class="title">
-
-        Hüseyin Güçlü |
-        Özgeçmiş
-
-    </h2>
-
-
-    <p class="section-description">
-
-        Eğitim hayatım, ilgi alanlarım ve web tasarım yolculuğum.
-
-    </p>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <div class="icon">
-                🎓
-            </div>
-
-            <h3>
-                Eğitim
-            </h3>
-
-            <p>
-
-                Web Tasarım ve Kodlama bölümünde
-                1. sınıf öğrencisiyim.
-
-                Web teknolojileri ve kodlama alanında
-                eğitimime devam ediyorum.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                💻
-            </div>
-
-            <h3>
-                Web Tasarım
-            </h3>
-
-            <p>
-
-                Modern ve responsive web siteleri
-                tasarlamaya, HTML, CSS ve JavaScript
-                gibi web teknolojileri üzerinde
-                çalışmaya ilgi duyuyorum.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                🚀
-            </div>
-
-            <h3>
-                Hedeflerim
-            </h3>
-
-            <p>
-
-                Kendimi sürekli geliştirerek daha
-                profesyonel web projeleri hazırlamak
-                ve başarılı bir web tasarımcı olmak
-                istiyorum.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     HİZMETLER
-========================= -->
-
-<section id="hizmetler">
-
-    <h2 class="title">
-
-        Hüseyin Güçlü
-        Neler Yapıyor?
-
-    </h2>
-
-
-    <p class="section-description">
-
-        Web sitesi yaptırmak veya internet üzerindeki
-        projenizi geliştirmek istiyorsanız
-        Hüseyin Güçlü ile iletişime geçebilirsiniz.
-
-    </p>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <div class="icon">
-                🌐
-            </div>
-
-            <h3>
-                Web Sitesi
-            </h3>
-
-            <p>
-
-                Kişisel, işletme veya proje amaçlı
-                modern web siteleri hazırlamak için
-                çalışmalar yapıyorum.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                📱
-            </div>
-
-            <h3>
-                Mobil Uyumlu Tasarım
-            </h3>
-
-            <p>
-
-                Hazırlanan sitelerin telefon, tablet
-                ve bilgisayar ekranlarında düzgün
-                görünmesine önem veriyorum.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                🎨
-            </div>
-
-            <h3>
-                Modern Tasarım
-            </h3>
-
-            <p>
-
-                Sade, modern, kullanışlı ve kullanıcı
-                dostu arayüzler üzerinde çalışıyorum.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     İLETİŞİM
-========================= -->
-
-<section
-    class="contact"
-    id="iletisim"
->
-
-    <h2 class="title">
-
-        Hüseyin Güçlü ile
-        İletişime Geç
-
-    </h2>
-
-
-    <div class="contact-box">
-
-
-        <p>
-
-            Bir web sitesi yaptırmak, mevcut sitenizi
-            yenilemek veya yeni bir web projesi hakkında
-            görüşmek istiyorsanız Hüseyin Güçlü ile
-            iletişime geçebilirsiniz.
-
+        <p class="section-description">
+            İşletmelerin internet üzerindeki görünürlüğünü
+            artırmasına yardımcı olacak web ve dijital
+            çözümler hazırlıyorum.
         </p>
 
+        <div class="cards">
 
-        <div class="contact-links">
+            <div class="card">
 
+                <div class="icon">
+                    🌐
+                </div>
 
-            <!-- TELEFON -->
+                <h3>
+                    İşletmeler İçin Web Sitesi
+                </h3>
 
-            <a
-                class="contact-link"
-                href="tel:05443642830"
-            >
+                <p>
+                    Restoran, kafe, berber, kuaför, mağaza
+                    ve farklı işletmeler için modern,
+                    mobil uyumlu ve kullanışlı web siteleri
+                    hazırlıyorum.
+                </p>
 
-                📞
-
-                0544 364 28 30
-
-            </a>
-
-
-            <!-- E-POSTA -->
-
-            <a
-                class="contact-link"
-                href="mailto:huseyinguclu123456789@gmail.com"
-            >
-
-                ✉️
-
-                E-posta Gönder
-
-            </a>
+            </div>
 
 
-            <!-- INSTAGRAM -->
+            <div class="card">
 
-            <a
-                class="contact-link"
-                href="https://www.instagram.com/hsyngcl_/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+                <div class="icon">
+                    📱
+                </div>
 
-                📷
+                <h3>
+                    NFC Menü
+                </h3>
 
-                Instagram
+                <p>
+                    Müşterilerin telefonlarını NFC etikete
+                    okutarak menüye kolayca ulaşabileceği
+                    dijital menü çözümleri hazırlıyorum.
+                </p>
 
-            </a>
+            </div>
 
 
-            <!-- WHATSAPP -->
+            <div class="card">
 
-            <a
-                class="contact-link"
-                href="https://wa.me/905443642830"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+                <div class="icon">
+                    ⭐
+                </div>
 
-                💬
+                <h3>
+                    NFC Google Yorum
+                </h3>
 
-                WhatsApp
+                <p>
+                    Müşterilerin NFC etiketi okutarak
+                    işletmenin Google yorum sayfasına
+                    hızlıca ulaşmasını sağlayan çözümler
+                    hazırlıyorum.
+                </p>
 
-            </a>
+            </div>
 
+
+            <div class="card">
+
+                <div class="icon">
+                    📲
+                </div>
+
+                <h3>
+                    NFC Sosyal Medya
+                </h3>
+
+                <p>
+                    Instagram ve diğer sosyal medya
+                    hesaplarına NFC ile hızlı erişim
+                    sağlayan dijital çözümler hazırlıyorum.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ▣
+                </div>
+
+                <h3>
+                    Karekod Menü
+                </h3>
+
+                <p>
+                    Müşterilerin telefon kameralarıyla
+                    okutabileceği, hızlı açılan ve mobil
+                    uyumlu QR menüler hazırlıyorum.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💳
+                </div>
+
+                <h3>
+                    Dijital Kartvizit
+                </h3>
+
+                <p>
+                    Telefon üzerinden kolayca paylaşılabilen
+                    ve iletişim bilgilerini tek yerde
+                    gösteren dijital kartvizit çözümleri
+                    hazırlıyorum.
+                </p>
+
+            </div>
 
         </div>
 
-
-        <a
-            class="btn"
-            href="mailto:huseyinguclu123456789@gmail.com?subject=Web%20Sitesi%20Yaptırmak%20İstiyorum"
-        >
-
-            Web Sitesi Yaptırmak İstiyorum →
-
-        </a>
+    </section>
 
 
-    </div>
+    <!-- İLETİŞİM -->
 
-</section>
+    <section
+        class="contact"
+        id="iletisim">
 
+        <h2 class="title">
+            İletişime Geç
+        </h2>
+
+        <div class="contact-box">
+
+            <p>
+                Web sitesi, NFC menü, QR menü, Google yorum
+                veya diğer dijital çözümler hakkında konuşmak
+                için benimle iletişime geçebilirsiniz.
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    class="contact-link"
+                    href="tel:05443642830">
+                    📞 0544 364 28 30
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="mailto:huseyinguclu123456789@gmail.com">
+                    ✉️ E-posta Gönder
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="https://www.instagram.com/hsyngcl_/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📷 Instagram
+                </a>
+
+                <a
+                    class="contact-link"
+                    href="https://wa.me/905443642830"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    💬 WhatsApp
+                </a>
+
+            </div>
+
+            <a
+                class="btn"
+                href="mailto:huseyinguclu123456789@gmail.com?subject=Web Sitesi ve Dijital Hizmetler Hakkında">
+                Teklif Almak İstiyorum →
+            </a>
+
+        </div>
+
+    </section>
 
 </main>
 
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1224,14 +1000,9 @@
 
     <br>
 
-    Web Tasarım ve Kodlama Öğrencisi:
-
-    <strong>
-        Hüseyin Güçlü
-    </strong>
+    Web Tasarım ve Kodlama Öğrencisi
 
 </footer>
-
 
 </body>
 </html>
